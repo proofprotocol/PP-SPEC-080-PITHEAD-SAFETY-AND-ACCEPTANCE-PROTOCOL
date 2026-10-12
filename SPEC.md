@@ -162,7 +162,7 @@ Terms defined in PP-SPEC-077 Section 2, PP-SPEC-078 Section 2, and PP-SPEC-079 S
 
 6.4. The Acceptance Result is registered and its Record ID returned to the Holder. The Holder MAY attach the Result to the Performance Record's Signature Envelope as an endorsement (077 21.4.2). A Result is never written into the Performance Record itself.
 
-6.5. An evaluator MAY be the Consumer, the Holder, an Independent Test Lab, an agent, an API, or a person; the Result says who and whether the evaluation was by machine, human, or both (`evaluated_by`). The reference evaluator in the Prooflock reference implementation is the conformance target for evaluators: identical Results on identical inputs.
+6.5. An evaluator MAY be the Consumer, the Holder, an Independent Test Lab, an agent, an API, or a person; the Result says who and whether the evaluation was by machine, human, or both (`evaluated_by`). The reference evaluator in the ProofSwarm reference implementation is the conformance target for evaluators: identical Results on identical inputs.
 
 6.6. A Result that reports `meets: true` on a record that fails any Section 4 clause is a defective Result, and the evaluator's Results MAY be revoked by the Consumer under 077 21.6.
 
