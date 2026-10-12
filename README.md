@@ -9,6 +9,8 @@
 > Licensed under the Greater Good Commercial License 1.0 (see LICENSE.md); text CC BY-ND 4.0 under its Part S. Original inventor: Craig Thomas Ellrod (ORCID 0009-0004-1058-7666).
 >
 > **Patent rights reserved.** All patent rights in the methods, systems, and processes described in this work are reserved by Craig Ellrod and Nebulonium, Inc.
+>
+> **Acknowledgements:** Tricia Wang and Jim Schwoebel, for the Jail concept; Josh Waldrep (Pipelabs), for early work on a complete agentic AI proof system with receipts and verdicts. See [ACKNOWLEDGEMENTS.md](ACKNOWLEDGEMENTS.md).
 
 ---
 
