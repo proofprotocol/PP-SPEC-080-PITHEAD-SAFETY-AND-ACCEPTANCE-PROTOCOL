@@ -1,5 +1,8 @@
 # Changelog
 
+## Unreleased
+- Proof, not evidence: wherever the text meant what the protocol produces, relies on, accepts, or prices, "evidence" is now "proof". Evidence remains the word for inputs inside a proof record (liveness, cause, differential, verification evidence). Evidence is not proof; proof contains evidence.
+
 ## 0.1.0 (2026-10-12)
 - Follows PP-SPEC-079 role and environment terms: Implementor, Provider, `dev`, Independent Test Lab, `implementor_funded`; seed profile Record ID recomputed
 - FUNDING.md funding disclosure ([FUNDED] Yes or No, [FUNDED BY] name and URL per funder); Proof Economy Code of Ethics applies

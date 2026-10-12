@@ -1,6 +1,6 @@
 {
   "spec": "PP-SPEC-080",
-  "profile_id": "bdfa987d0a6093cba47f58dd03d26c55f7d9624956b532871e1913c0ff52292c",
+  "profile_id": "a00c9ae782872210cbb4ff74debb6b724c0cb6331ead115f561461cbed2ca639",
   "name": "Cyber Insurance Underwriting",
   "version": "1.0.0",
   "consumer": {
@@ -92,7 +92,7 @@
   "extensions_accepted": [],
   "retroactive": false,
   "supersedes": null,
-  "notes": "Seed profile. No thresholds by design: the profile admits evidence to a pricing model, it is not the model.",
+  "notes": "Seed profile. No thresholds by design: the profile admits proof to a pricing model, it is not the model.",
   "drift": {
     "accept_fragmented": false,
     "max_corpus_age_days": 90,
