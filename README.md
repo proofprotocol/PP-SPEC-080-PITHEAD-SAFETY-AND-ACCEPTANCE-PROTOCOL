@@ -14,7 +14,7 @@
 
 **The pithead is where what comes out of the mine is checked before anyone relies on it.**
 
-**One protocol. Many readers. Each reader sets its own bar, in writing, before it depends on anything.** That is how a large organization adopts something new safely: not on the author's promise, but on its own published standard, applied to evidence it can verify itself.
+**One protocol. Many readers. Each reader sets its own bar, in writing, before it depends on anything.** That is how a large organization adopts something new safely: not on the author's promise, but on its own published standard, applied to proof it can verify itself.
 
 PP-SPEC-077, 078, and 079 produce records of what a security control actually did. They do not say whether any particular reader should accept one. An insurer, a regulator, a bank's third-party risk team, a hospital group, an Implementor writing a contract: each needs to state in advance what a Performance Record must satisfy before it counts.
 
