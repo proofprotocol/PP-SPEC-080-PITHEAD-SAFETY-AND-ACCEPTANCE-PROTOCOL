@@ -1,5 +1,7 @@
 # The Pithead Safety and Acceptance Protocol (PP-SPEC-080)
 
+![080 Pithead Safety and Acceptance Protocol: a canary in a suit checking a clipboard at the pithead](docs/banner.jpg)
+
 > **Ownership and Attribution Notice**
 >
 > The Pithead Safety and Acceptance Protocol (PP-SPEC-080) is authored by **Craig Ellrod** (Nebulonium, Inc., dba HACKERverse) and published as part of **Proof Protocol**. Copyright (c) 2026 Nebulonium, Inc.
