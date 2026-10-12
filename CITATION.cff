@@ -21,7 +21,7 @@ references:
     version: 0.1.1
     url: "https://github.com/proofprotocol/PP-SPEC-079-COAL-MINE-PROTOCOL"
   - type: standard
-    title: "Prooflock: The Dead Canary Protocol (PP-SPEC-077)"
+    title: "ProofSwarm: The Dead Canary Protocol (PP-SPEC-077)"
     version: 0.7.2
     doi: 10.5281/zenodo.23285061
   - type: standard
