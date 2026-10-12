@@ -22,6 +22,10 @@ Greater Good Commercial License 1.0 (LicenseRef-GGL-C-1.0); specification text C
 
 All patent rights in the methods, systems, and processes described in this work are reserved by Craig Ellrod and Nebulonium, Inc. Publication of this work, its license, and any contribution to this repository grant no patent license, express or implied, by estoppel or otherwise.
 
+## Acknowledgment
+
+Tricia Wang and Jim Schwoebel, for the Jail concept and the name "No Bros Jail Mode Protocol". Josh Waldrep (Pipelabs), for early work on a complete agentic AI proof system with receipts and verdicts. See ACKNOWLEDGEMENTS.md.
+
 ## Prior art
 
 This specification is related to the Proof Economy Prior Art Declaration, DOI 10.5281/zenodo.21379780.
