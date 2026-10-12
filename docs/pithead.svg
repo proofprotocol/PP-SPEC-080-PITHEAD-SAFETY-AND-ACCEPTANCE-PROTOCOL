@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Pithead Safety and Acceptance Protocol, PP-SPEC-080: records from PP-SPEC-077, 078 and 079 sit in a Registry; consumers such as insurers, regulators, banks, hospital groups and Implementors each publish a registered, versioned Acceptance Profile; an Acceptance Evaluation by machine or human checks a record against a profile in a fixed order, thresholds last, and produces a signed Acceptance Result listing every failing clause; the result is attached as an endorsement and never written into the record; accepted records feed the consumer's own model. Principles and the seed cyber insurance underwriting profile are shown." font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c9d1d9"/></marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#f2cc60"/></marker>
+    <marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#79c0ff"/></marker>
+  </defs>
+  <rect width="1600" height="900" fill="#0d1117"/>
+
+  <text x="40" y="40" fill="#e6edf3" font-size="20" font-weight="bold">The Pithead Safety and Acceptance Protocol (PP-SPEC-080)</text>
+  <text x="40" y="62" fill="#aab3bd">One protocol, many readers. A profile never changes a record; it decides whether a reader takes it.</text>
+  <rect x="40" y="100" width="320" height="160" rx="6" fill="#161b22" stroke="#c9d1d9"/>
+  <text x="200" y="124" fill="#e6edf3" font-weight="bold" text-anchor="middle">Records from the mine</text>
+  <text x="200" y="142" fill="#aab3bd" text-anchor="middle">registered, with Receipts</text>
+  <text x="56" y="164" fill="#e6edf3">Units of Proof (077)</text>
+  <text x="56" y="180" fill="#e6edf3">bookings and verdicts (078)</text>
+  <text x="56" y="196" fill="#e6edf3">Performance Record (079)</text>
+  <text x="56" y="212" fill="#e6edf3">Performance Series (079)</text>
+  <text x="56" y="228" fill="#e6edf3">never changed by a profile</text>
+  <rect x="40" y="290" width="320" height="110" rx="6" fill="#161b22" stroke="#c9d1d9"/>
+  <text x="200" y="314" fill="#e6edf3" font-weight="bold" text-anchor="middle">Registry</text>
+  <text x="200" y="332" fill="#aab3bd" text-anchor="middle">PP-SPEC-004, proofregister.com</text>
+  <text x="56" y="354" fill="#e6edf3">records, profiles, results,</text>
+  <text x="56" y="370" fill="#e6edf3">and the Profile Registry</text>
+  <rect x="40" y="430" width="320" height="130" rx="6" fill="#161b22" stroke="#9aa4ae"/>
+  <text x="200" y="454" fill="#e6edf3" font-weight="bold" text-anchor="middle">Holder</text>
+  <text x="200" y="472" fill="#aab3bd" text-anchor="middle">owns the record</text>
+  <text x="56" y="494" fill="#e6edf3">commissions Engagements that</text>
+  <text x="56" y="510" fill="#e6edf3">meet a profile; may attach a</text>
+  <text x="56" y="526" fill="#e6edf3">Result as an endorsement</text>
+  <rect x="40" y="590" width="320" height="110" rx="6" fill="#161b22" stroke="#9aa4ae"/>
+  <text x="200" y="614" fill="#e6edf3" font-weight="bold" text-anchor="middle">Profile Registry</text>
+  <text x="200" y="632" fill="#aab3bd" text-anchor="middle">recognized by the maintainer</text>
+  <text x="56" y="654" fill="#e6edf3">current, superseded, withdrawn</text>
+  <text x="56" y="670" fill="#e6edf3">seed profiles show the form</text>
+  <rect x="400" y="100" width="1160" height="190" rx="8" fill="none" stroke="#9aa4ae" stroke-dasharray="6 4"/>
+  <text x="416" y="122" fill="#e6edf3" font-weight="bold">Consumers: whoever carries the risk publishes what it will accept</text>
+  <rect x="416" y="140" width="212" height="130" rx="6" fill="#161b22" stroke="#79c0ff"/>
+  <text x="522" y="164" fill="#79c0ff" font-weight="bold" text-anchor="middle">Insurer</text>
+  <text x="522" y="182" fill="#aab3bd" text-anchor="middle">underwriting, renewal</text>
+  <text x="432" y="204" fill="#e6edf3">publishes its own</text>
+  <text x="432" y="220" fill="#e6edf3">Acceptance Profile,</text>
+  <text x="432" y="236" fill="#e6edf3">in advance, in public</text>
+  <rect x="644" y="140" width="212" height="130" rx="6" fill="#161b22" stroke="#79c0ff"/>
+  <text x="750" y="164" fill="#79c0ff" font-weight="bold" text-anchor="middle">Regulator</text>
+  <text x="750" y="182" fill="#aab3bd" text-anchor="middle">supervisory review</text>
+  <text x="660" y="204" fill="#e6edf3">publishes its own</text>
+  <text x="660" y="220" fill="#e6edf3">Acceptance Profile,</text>
+  <text x="660" y="236" fill="#e6edf3">in advance, in public</text>
+  <rect x="872" y="140" width="212" height="130" rx="6" fill="#161b22" stroke="#79c0ff"/>
+  <text x="978" y="164" fill="#79c0ff" font-weight="bold" text-anchor="middle">Bank</text>
+  <text x="978" y="182" fill="#aab3bd" text-anchor="middle">third-party risk</text>
+  <text x="888" y="204" fill="#e6edf3">publishes its own</text>
+  <text x="888" y="220" fill="#e6edf3">Acceptance Profile,</text>
+  <text x="888" y="236" fill="#e6edf3">in advance, in public</text>
+  <rect x="1100" y="140" width="212" height="130" rx="6" fill="#161b22" stroke="#79c0ff"/>
+  <text x="1206" y="164" fill="#79c0ff" font-weight="bold" text-anchor="middle">Hospital group</text>
+  <text x="1206" y="182" fill="#aab3bd" text-anchor="middle">procurement</text>
+  <text x="1116" y="204" fill="#e6edf3">publishes its own</text>
+  <text x="1116" y="220" fill="#e6edf3">Acceptance Profile,</text>
+  <text x="1116" y="236" fill="#e6edf3">in advance, in public</text>
+  <rect x="1328" y="140" width="212" height="130" rx="6" fill="#161b22" stroke="#79c0ff"/>
+  <text x="1434" y="164" fill="#79c0ff" font-weight="bold" text-anchor="middle">Implementor</text>
+  <text x="1434" y="182" fill="#aab3bd" text-anchor="middle">contract remedy</text>
+  <text x="1344" y="204" fill="#e6edf3">publishes its own</text>
+  <text x="1344" y="220" fill="#e6edf3">Acceptance Profile,</text>
+  <text x="1344" y="236" fill="#e6edf3">in advance, in public</text>
+  <polyline points="610,290 610,318" fill="none" stroke="#79c0ff" marker-end="url(#ac)"/>
+  <text x="620" y="308" fill="#79c0ff">publish</text>
+  <rect x="400" y="320" width="420" height="290" rx="6" fill="#161b22" stroke="#79c0ff"/>
+  <text x="610" y="344" fill="#79c0ff" font-weight="bold" text-anchor="middle">Acceptance Profile</text>
+  <text x="610" y="362" fill="#aab3bd" text-anchor="middle">AP-1:profile. Public, versioned, registered</text>
+  <text x="416" y="384" fill="#e6edf3">applies_to: Technology Profiles</text>
+  <text x="416" y="400" fill="#e6edf3">mine_plan, environment_classes</text>
+  <text x="416" y="416" fill="#e6edf3">regulatory_regime</text>
+  <text x="416" y="432" fill="#e6edf3">conformance_level: registered</text>
+  <text x="416" y="448" fill="#e6edf3">max_record_age_days, series</text>
+  <text x="416" y="464" fill="#e6edf3">claim_findings: reject | flag | ignore</text>
+  <text x="416" y="480" fill="#e6edf3">absence_limits: Blind, Void share</text>
+  <text x="416" y="496" fill="#e6edf3">disclosure, registries</text>
+  <text x="416" y="512" fill="#e6edf3">self_provided, funding_tiers</text>
+  <text x="416" y="528" fill="#e6edf3">authorship_disclosure, drift</text>
+  <text x="416" y="544" fill="#e6edf3">thresholds: optional</text>
+  <text x="416" y="560" fill="#e6edf3">never names a Provider or product</text>
+  <rect x="860" y="320" width="400" height="290" rx="6" fill="#161b22" stroke="#f2cc60"/>
+  <text x="1060" y="344" fill="#f2cc60" font-weight="bold" text-anchor="middle">Acceptance Evaluation</text>
+  <text x="1060" y="362" fill="#aab3bd" text-anchor="middle">machine or human, same answer</text>
+  <text x="876" y="384" fill="#e6edf3">1  Registry Receipt, Record ID</text>
+  <text x="876" y="400" fill="#e6edf3">2  Conformance Level</text>
+  <text x="876" y="416" fill="#e6edf3">3  undeclared drift</text>
+  <text x="876" y="432" fill="#e6edf3">4  Comparability Class</text>
+  <text x="876" y="448" fill="#e6edf3">5  Engagement Mode, Self-Provided</text>
+  <text x="876" y="464" fill="#e6edf3">6  funding tier</text>
+  <text x="876" y="480" fill="#e6edf3">7  record age, Series</text>
+  <text x="876" y="496" fill="#e6edf3">8  absence limits</text>
+  <text x="876" y="512" fill="#e6edf3">9  Claim Findings rule</text>
+  <text x="876" y="528" fill="#e6edf3">10 disclosure, Delegation</text>
+  <text x="876" y="544" fill="#e6edf3">11 extensions</text>
+  <text x="876" y="560" fill="#e6edf3">12 thresholds, last</text>
+  <rect x="1300" y="320" width="260" height="290" rx="6" fill="#161b22" stroke="#79c0ff"/>
+  <text x="1430" y="344" fill="#79c0ff" font-weight="bold" text-anchor="middle">Acceptance Result</text>
+  <text x="1430" y="362" fill="#aab3bd" text-anchor="middle">AP-1:result, signed</text>
+  <text x="1316" y="384" fill="#e6edf3">meets: true | false</text>
+  <text x="1316" y="416" fill="#e6edf3">every failing clause:</text>
+  <text x="1316" y="432" fill="#e6edf3">field, the record's value,</text>
+  <text x="1316" y="448" fill="#e6edf3">the profile's requirement</text>
+  <text x="1316" y="480" fill="#e6edf3">evaluated_by: machine,</text>
+  <text x="1316" y="496" fill="#e6edf3">human, or both</text>
+  <text x="1316" y="528" fill="#e6edf3">attached as endorsement,</text>
+  <text x="1316" y="544" fill="#e6edf3">never written into the record</text>
+  <polyline points="820,465 858,465" fill="none" stroke="#79c0ff" marker-end="url(#ac)"/>
+  <polyline points="1260,465 1298,465" fill="none" stroke="#f2cc60" marker-end="url(#ag)"/>
+  <polyline points="360,180 380,180 380,680 1060,680 1060,612" fill="none" stroke="#c9d1d9" marker-end="url(#a)"/>
+  <text x="400" y="672" fill="#aab3bd">record + Series + Registry</text>
+  <polyline points="1430,610 1430,718" fill="none" stroke="#c9d1d9" marker-end="url(#a)"/>
+  <text x="1440" y="668" fill="#aab3bd">accepted records</text>
+  <rect x="40" y="720" width="560" height="160" rx="6" fill="#161b22" stroke="#c9d1d9"/>
+  <text x="56" y="744" fill="#e6edf3" font-weight="bold">Principles</text>
+  <text x="56" y="766" fill="#e6edf3">constrains the record, never the control</text>
+  <text x="56" y="782" fill="#e6edf3">adds, never relaxes: 079 is the floor</text>
+  <text x="56" y="798" fill="#e6edf3">published before applied, 90 days ahead</text>
+  <text x="56" y="814" fill="#e6edf3">a profile is a record: hashed, signed, registered</text>
+  <text x="56" y="830" fill="#e6edf3">deterministic: no clause needs a judgment</text>
+  <text x="56" y="846" fill="#e6edf3">discloses its own authorship (077 21.15)</text>
+  <rect x="640" y="720" width="560" height="160" rx="6" fill="#161b22" stroke="#f2cc60"/>
+  <text x="656" y="744" fill="#f2cc60" font-weight="bold">Seed: ap:insurance-cyber-underwriting:1.0</text>
+  <text x="656" y="766" fill="#e6edf3">In-Situ prod or pre-prod, or Lab on a recognized</text>
+  <text x="656" y="782" fill="#e6edf3">Reference Environment; record at most 180 days old</text>
+  <text x="656" y="798" fill="#e6edf3">renewal: Series of 2+ entries, at most 120 days apart</text>
+  <text x="656" y="814" fill="#e6edf3">Blind and Void at most 10 percent per run</text>
+  <text x="656" y="830" fill="#e6edf3">Claim Findings flagged; Provider-Funded not accepted</text>
+  <text x="656" y="846" fill="#e6edf3">no efficacy threshold: the profile admits, the model prices</text>
+  <rect x="1240" y="720" width="320" height="160" rx="6" fill="#161b22" stroke="#9aa4ae"/>
+  <text x="1400" y="744" fill="#e6edf3" font-weight="bold" text-anchor="middle">The Consumer's own model</text>
+  <text x="1400" y="762" fill="#aab3bd" text-anchor="middle">after acceptance</text>
+  <text x="1256" y="784" fill="#e6edf3">efficacy and miss rates by</text>
+  <text x="1256" y="800" fill="#e6edf3">technique class: the frequency</text>
+  <text x="1256" y="816" fill="#e6edf3">signal. Severity comes from</text>
+  <text x="1256" y="832" fill="#e6edf3">elsewhere. Judgment lives here,</text>
+  <text x="1256" y="848" fill="#e6edf3">not in the profile.</text>
+</svg>

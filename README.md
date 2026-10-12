@@ -8,7 +8,7 @@
 >
 > Licensed under the Greater Good Commercial License 1.0 (see LICENSE.md); text CC BY-ND 4.0 under its Part S. Original inventor: Craig Thomas Ellrod (ORCID 0009-0004-1058-7666).
 >
-> **Patent rights reserved.** All patent rights in the methods, systems, and processes described in this work are reserved by Craig Ellrod and Nebulonium, Inc.
+> **Patents.** Patent terms are in [PATENT-SCHEDULE.md](PATENT-SCHEDULE.md). Claims not listed there are reserved by Craig Ellrod and Nebulonium, Inc. Licensing: 1proofprotocol@gmail.com.
 >
 > **Acknowledgements:** Tricia Wang and Jim Schwoebel, for the name "No Bros Jail Mode Protocol"; Josh Waldrep (Pipelabs), for his later receipt-based verification work applying proof concepts to agentic AI. See [ACKNOWLEDGEMENTS.md](ACKNOWLEDGEMENTS.md).
 
@@ -23,6 +23,10 @@ PP-SPEC-077, 078, and 079 produce records of what a security control actually di
 An Acceptance Profile is that statement. Short, versioned, registered, checkable by a machine or a human with the same result. A record meets it or does not, with the failing clauses listed.
 
 Verticals are profiles, not specs. There is no insurance edition, healthcare edition, or federal edition of the protocol. There is one protocol and a registry of profiles, each pointing at the same three specifications by DOI and adding requirements on top, never beneath.
+
+## How it works
+
+![Pithead Safety and Acceptance Protocol: records from 077, 078 and 079 in a Registry; consumers publish Acceptance Profiles; a machine or human Acceptance Evaluation in fixed order; a signed Acceptance Result listing every failing clause; the seed cyber insurance underwriting profile](docs/pithead.svg)
 
 ## What a profile may and may not do
 
