@@ -1,0 +1,491 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/proofprotocol/PP-SPEC-080-ACCEPTANCE-PROFILES/schemas/acceptance-profile.schema.json",
+  "title": "Acceptance Profile (PP-SPEC-080 Section 4)",
+  "type": "object",
+  "required": [
+    "spec",
+    "profile_id",
+    "name",
+    "version",
+    "consumer",
+    "purpose",
+    "applies_to",
+    "mine_plan",
+    "environment_classes",
+    "regulatory_regime",
+    "conformance_level",
+    "max_record_age_days",
+    "series",
+    "claim_findings",
+    "absence_limits",
+    "disclosure",
+    "registries",
+    "self_provided",
+    "funding_tiers",
+    "retroactive",
+    "drift",
+    "authorship_disclosure"
+  ],
+  "properties": {
+    "spec": {
+      "const": "PP-SPEC-080"
+    },
+    "profile_id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "description": "Record ID under tag AP-1:profile (077 21.1)"
+    },
+    "name": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "consumer": {
+      "type": "object",
+      "required": [
+        "id",
+        "public_key"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "public_key": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "purpose": {
+      "type": "string",
+      "pattern": "^(underwriting|renewal|procurement|supervisory_review|contract_remedy|x-[a-z0-9]+-[a-z0-9_]+)$"
+    },
+    "applies_to": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^([a-z0-9-]+|x-[a-z0-9]+-[a-z0-9_]+)$"
+      },
+      "description": "PP-SPEC-077 Section 17 Technology Profile identifiers"
+    },
+    "all_classes_required": {
+      "type": "boolean",
+      "default": false
+    },
+    "mine_plan": {
+      "type": "object",
+      "required": [
+        "per_profile",
+        "jcp_required",
+        "production_stream_min_days"
+      ],
+      "properties": {
+        "per_profile": {
+          "type": "object",
+          "required": [
+            "min_bounded_runs",
+            "colors_required",
+            "composition",
+            "composition_min_version"
+          ],
+          "properties": {
+            "min_bounded_runs": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "colors_required": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "white",
+                  "gray",
+                  "red",
+                  "black",
+                  "gold"
+                ]
+              }
+            },
+            "composition": {
+              "type": "string"
+            },
+            "composition_min_version": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "jcp_required": {
+          "enum": [
+            "never",
+            "always",
+            "when_agent_holds_credentials",
+            "when_profile_is_agentic"
+          ]
+        },
+        "production_stream_min_days": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "environment_classes": {
+      "type": "object",
+      "required": [
+        "in_situ",
+        "independent_lab"
+      ],
+      "properties": {
+        "in_situ": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "production",
+              "pre-production",
+              "qa",
+              "dev"
+            ]
+          }
+        },
+        "independent_lab": {
+          "type": "object",
+          "required": [
+            "accepted"
+          ],
+          "properties": {
+            "accepted": {
+              "type": "boolean"
+            },
+            "reference_environments": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "purpose_overrides": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "regulatory_regime": {
+      "oneOf": [
+        {
+          "const": "any"
+        },
+        {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "conformance_level": {
+      "const": "registered"
+    },
+    "max_record_age_days": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "series": {
+      "type": "object",
+      "required": [
+        "required_for",
+        "min_entries",
+        "max_gap_days",
+        "accept_stale"
+      ],
+      "properties": {
+        "required_for": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "min_entries": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_gap_days": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "accept_stale": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "thresholds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "technology_profile",
+          "comparability_class",
+          "metric",
+          "min",
+          "absence_treatment"
+        ],
+        "properties": {
+          "technology_profile": {
+            "type": "string"
+          },
+          "comparability_class": {
+            "type": "string"
+          },
+          "metric": {
+            "type": "string"
+          },
+          "min": {
+            "type": "number"
+          },
+          "absence_treatment": {
+            "enum": [
+              "excluded",
+              "counted_as_missed",
+              "counted_as_stopped_never"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "claim_findings": {
+      "type": "object",
+      "required": [
+        "default"
+      ],
+      "properties": {
+        "default": {
+          "enum": [
+            "reject",
+            "flag",
+            "ignore"
+          ]
+        },
+        "rules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "when",
+              "action"
+            ],
+            "properties": {
+              "when": {
+                "type": "string"
+              },
+              "action": {
+                "enum": [
+                  "reject",
+                  "flag",
+                  "ignore"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "absence_limits": {
+      "type": "object",
+      "required": [
+        "blind_share_max",
+        "void_share_max"
+      ],
+      "properties": {
+        "blind_share_max": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "void_share_max": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "disclosure": {
+      "type": "object",
+      "required": [
+        "accepted",
+        "holder_only_requires_delegation"
+      ],
+      "properties": {
+        "accepted": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "public",
+              "holder_only"
+            ]
+          }
+        },
+        "holder_only_requires_delegation": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "registries": {
+      "oneOf": [
+        {
+          "const": "any_cross_anchored"
+        },
+        {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "self_provided": {
+      "enum": [
+        "not_accepted",
+        "accepted",
+        "accepted_with_external_witness",
+        "accepted_with_external_issuer_and_witness"
+      ]
+    },
+    "funding_tiers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "provider_funded",
+          "implementor_funded",
+          "pesa_governed"
+        ]
+      }
+    },
+    "extensions_accepted": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^x-[a-z0-9]+-[a-z0-9_]+$"
+      }
+    },
+    "retroactive": {
+      "type": "boolean"
+    },
+    "supersedes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "signatures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "role",
+          "key",
+          "sig"
+        ],
+        "properties": {
+          "role": {
+            "enum": [
+              "holder",
+              "registry",
+              "endorser"
+            ]
+          },
+          "key": {
+            "type": "string"
+          },
+          "sig": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "proofregister_uri": {
+      "type": "string",
+      "format": "uri"
+    },
+    "registry_receipt": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "extensions": {
+      "type": "object"
+    },
+    "drift": {
+      "type": "object",
+      "required": [
+        "accept_fragmented",
+        "max_corpus_age_days",
+        "rates_across_segments",
+        "reject_if_undeclared"
+      ],
+      "properties": {
+        "accept_fragmented": {
+          "type": "boolean"
+        },
+        "max_corpus_age_days": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "rates_across_segments": {
+          "type": "boolean"
+        },
+        "reject_if_undeclared": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "authorship_disclosure": {
+      "type": "object",
+      "required": [
+        "required",
+        "human_review_required"
+      ],
+      "properties": {
+        "required": {
+          "type": "boolean"
+        },
+        "human_review_required": {
+          "type": "boolean"
+        },
+        "profile_disclosure": {
+          "type": "string",
+          "description": "URI of this profile's own ai_disclosure.json"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,112 @@
+{
+  "spec": "PP-SPEC-080",
+  "profile_id": "bdfa987d0a6093cba47f58dd03d26c55f7d9624956b532871e1913c0ff52292c",
+  "name": "Cyber Insurance Underwriting",
+  "version": "1.0.0",
+  "consumer": {
+    "id": "nebulonium:seed-profiles",
+    "public_key": "unspecified"
+  },
+  "purpose": "underwriting",
+  "applies_to": [
+    "web-application",
+    "endpoint-host",
+    "identity-access",
+    "cloud-workload",
+    "agentic-ai-controls"
+  ],
+  "all_classes_required": false,
+  "mine_plan": {
+    "per_profile": {
+      "min_bounded_runs": 1,
+      "colors_required": [
+        "white",
+        "gray",
+        "red",
+        "black",
+        "gold"
+      ],
+      "composition": "cmp-underwriting",
+      "composition_min_version": "1"
+    },
+    "jcp_required": "when_agent_holds_credentials",
+    "production_stream_min_days": 30
+  },
+  "environment_classes": {
+    "in_situ": [
+      "production",
+      "pre-production"
+    ],
+    "independent_lab": {
+      "accepted": true,
+      "reference_environments": [
+        "recognized"
+      ]
+    },
+    "purpose_overrides": {
+      "renewal": [
+        "production",
+        "pre-production",
+        "qa",
+        "dev"
+      ]
+    }
+  },
+  "regulatory_regime": "any",
+  "conformance_level": "registered",
+  "max_record_age_days": 180,
+  "series": {
+    "required_for": [
+      "renewal"
+    ],
+    "min_entries": 2,
+    "max_gap_days": 120,
+    "accept_stale": false
+  },
+  "claim_findings": {
+    "default": "flag",
+    "rules": [
+      {
+        "when": "purpose == renewal and technique in holder.declared_threat_model and finding.remediated == false",
+        "action": "reject"
+      }
+    ]
+  },
+  "absence_limits": {
+    "blind_share_max": 0.1,
+    "void_share_max": 0.1
+  },
+  "disclosure": {
+    "accepted": [
+      "public",
+      "holder_only"
+    ],
+    "holder_only_requires_delegation": true
+  },
+  "registries": "any_cross_anchored",
+  "self_provided": "accepted_with_external_witness",
+  "funding_tiers": [
+    "implementor_funded",
+    "pesa_governed"
+  ],
+  "extensions_accepted": [],
+  "retroactive": false,
+  "supersedes": null,
+  "notes": "Seed profile. No thresholds by design: the profile admits evidence to a pricing model, it is not the model.",
+  "drift": {
+    "accept_fragmented": false,
+    "max_corpus_age_days": 90,
+    "rates_across_segments": false,
+    "reject_if_undeclared": [
+      "control",
+      "corpus",
+      "harness",
+      "pigtail"
+    ]
+  },
+  "authorship_disclosure": {
+    "required": true,
+    "human_review_required": true,
+    "profile_disclosure": "https://github.com/proofprotocol/PP-SPEC-080-ACCEPTANCE-PROFILES/blob/main/ai_disclosure.json"
+  }
+}

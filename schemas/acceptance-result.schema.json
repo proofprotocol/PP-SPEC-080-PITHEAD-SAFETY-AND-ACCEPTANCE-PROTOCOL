@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/proofprotocol/PP-SPEC-080-ACCEPTANCE-PROFILES/schemas/acceptance-result.schema.json",
+  "title": "Acceptance Result (PP-SPEC-080 Section 6.3)",
+  "type": "object",
+  "required": [
+    "spec",
+    "result_id",
+    "subject_record_id",
+    "subject_kind",
+    "profile_id",
+    "profile_version",
+    "evaluated_at",
+    "time_anchor_pulse",
+    "meets",
+    "failing_clauses",
+    "evaluator",
+    "evaluated_by"
+  ],
+  "properties": {
+    "spec": {
+      "const": "PP-SPEC-080"
+    },
+    "result_id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "description": "Record ID under tag AP-1:result"
+    },
+    "subject_record_id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "subject_kind": {
+      "enum": [
+        "performance_record",
+        "performance_series"
+      ]
+    },
+    "profile_id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "profile_version": {
+      "type": "string"
+    },
+    "evaluated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "time_anchor_pulse": {
+      "type": "string"
+    },
+    "meets": {
+      "type": "boolean"
+    },
+    "per_class": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "comparability_class",
+          "meets"
+        ],
+        "properties": {
+          "comparability_class": {
+            "type": "string"
+          },
+          "meets": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "failing_clauses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "field",
+          "record_value",
+          "required"
+        ],
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "record_value": {},
+          "required": {}
+        },
+        "additionalProperties": false
+      }
+    },
+    "evaluator": {
+      "type": "object",
+      "required": [
+        "id",
+        "public_key"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "public_key": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "signatures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "role",
+          "key",
+          "sig"
+        ],
+        "properties": {
+          "role": {
+            "enum": [
+              "issuer",
+              "holder",
+              "registry",
+              "endorser"
+            ]
+          },
+          "key": {
+            "type": "string"
+          },
+          "sig": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "proofregister_uri": {
+      "type": "string",
+      "format": "uri"
+    },
+    "registry_receipt": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "evaluated_by": {
+      "enum": [
+        "machine",
+        "human",
+        "both"
+      ],
+      "description": "SPEC 6.5"
+    }
+  },
+  "additionalProperties": false
+}
