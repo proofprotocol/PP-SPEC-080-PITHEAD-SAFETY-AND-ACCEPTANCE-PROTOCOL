@@ -4,7 +4,7 @@ title: "The Pithead Safety and Acceptance Protocol (PP-SPEC-080)"
 version: 0.1.0
 date-released: 2026-10-12
 type: standard
-license: LicenseRef-GGL-1.0
+license-url: "https://github.com/proofprotocol/PP-SPEC-080-PITHEAD-SAFETY-AND-ACCEPTANCE-PROTOCOL/blob/main/LICENSE.md"
 keywords:
   - "acceptance profile"
   - "cyber insurance underwriting"
