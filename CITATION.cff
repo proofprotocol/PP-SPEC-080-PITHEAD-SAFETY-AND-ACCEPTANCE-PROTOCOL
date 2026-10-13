@@ -24,11 +24,11 @@ references:
   - type: standard
     title: "ProofSwarm: The Dead Canary Protocol (PP-SPEC-077)"
     version: 0.7.2
-    doi: 10.5281/zenodo.23325759
+    doi: 10.5281/zenodo.23285060
   - type: standard
     title: "No Bros Jail Mode Protocol: The Jailed Canary Protocol (PP-SPEC-078)"
     version: 0.2.1
-    doi: 10.5281/zenodo.23325766
+    doi: 10.5281/zenodo.23285066
   - type: generic
     title: "Proof Economy Prior Art Declaration"
     doi: 10.5281/zenodo.21379780
