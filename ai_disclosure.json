@@ -1,8 +1,8 @@
 {
   "spec": "PP-SPEC-077:21.15",
   "work": "PP-SPEC-080 The Pithead Safety and Acceptance Protocol",
-  "work_version": "0.1.0",
-  "date": "2026-10-12",
+  "work_version": "0.1.1",
+  "date": "2026-10-13",
   "human_authors": [
     {
       "name": "Craig Thomas Ellrod",
@@ -52,13 +52,15 @@
       "Machine and human evaluation requirement",
       "Drift and authorship requirements carried into profiles",
       "Review and acceptance",
-      "Chose the title Pithead Safety and Acceptance Protocol and asked that adoption safety for large organizations be stated"
+      "Chose the title Pithead Safety and Acceptance Protocol and asked that adoption safety for large organizations be stated",
+      "0.1.1: decision to limit the maintainer to editorial responsibility (Section 13), matching PP-SPEC-079 v0.1.2"
     ],
     "ai": [
       "The answer: one spec of profiles, verticals as profiles",
       "Text as written",
       "Principles, field table, evaluation order, Result record, Profile Registry",
-      "Seed profile clauses and the no-threshold rationale"
+      "Seed profile clauses and the no-threshold rationale",
+      "0.1.1: text of the Section 13 change and the matching changelog and CONTRIBUTING entries"
     ]
   },
   "pending_acceptance": [

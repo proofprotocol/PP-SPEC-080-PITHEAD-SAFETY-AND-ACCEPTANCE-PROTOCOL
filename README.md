@@ -71,7 +71,7 @@ Proof of Control and Proof of Efficacy are different claims. Proof of Control es
 
 ## Status
 
-Draft, version 0.1.0, 2026-10-12. Maintained by Nebulonium, Inc. as part of Proof Protocol. Builds on PP-SPEC-079 v0.1.1, PP-SPEC-077 v0.7.2, PP-SPEC-078 v0.2.1, PP-SPEC-004.
+Draft, version 0.1.1, 2026-10-13. Maintained by Nebulonium, Inc. as part of Proof Protocol. Builds on PP-SPEC-079 v0.1.1, PP-SPEC-077 v0.7.2, PP-SPEC-078 v0.2.1, PP-SPEC-004.
 
 Archived on Zenodo: v0.1.0, DOI [10.5281/zenodo.23325778](https://doi.org/10.5281/zenodo.23325778). All versions: [10.5281/zenodo.23325777](https://doi.org/10.5281/zenodo.23325777).
 

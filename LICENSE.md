@@ -4,7 +4,7 @@ This repository is licensed under the **Greater Good Commercial License 1.0** (`
 
 ```
 License family: Greater Good License 1.0
-Covered Work: PP-SPEC-080, The Pithead Safety and Acceptance Protocol, version 0.1.0
+Covered Work: PP-SPEC-080, The Pithead Safety and Acceptance Protocol, version 0.1.1
 Offered under: GGL-C-1.0
 Original Inventor: Craig Thomas Ellrod, ORCID 0009-0004-1058-7666
 Inventor Record: DOI (pending)

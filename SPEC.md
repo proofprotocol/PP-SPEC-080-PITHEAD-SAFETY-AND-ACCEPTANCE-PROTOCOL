@@ -17,8 +17,8 @@
 | Field | Value |
 |---|---|
 | Spec ID | PP-SPEC-080 |
-| Version | 0.1.0 (Draft) |
-| Date | 2026-10-12 |
+| Version | 0.1.1 (Draft) |
+| Date | 2026-10-13 |
 | Status | Draft for public record |
 | Maintainer | Nebulonium, Inc. (Proof Protocol) |
 | Builds on | PP-SPEC-079 v0.1.1 (Coal Mine Protocol), PP-SPEC-077 v0.7.2 (Dead Canary), PP-SPEC-078 v0.2.1 (Jailed Canary), PP-SPEC-004 (ProofRegister API) |
@@ -227,10 +227,11 @@ Profiles for supervisory review by financial and healthcare regulators, profile 
 
 ## 13. Interpretation
 
-Nebulonium, Inc., as maintainer of Proof Protocol, reserves final interpretive discretion over this specification, over recognition of profiles, and over conformance claims made under it.
+Nebulonium, Inc., as maintainer of Proof Protocol, is responsible for the editorial text of this specification and keeps the Profile Registry (Section 7). Whether a record meets a profile, and whether a profile meets Sections 3 and 4, is determined against the normative text, and is not decided by the maintainer.
 
 ## Revision History
 
 | Version | Date | Notes |
 |---|---|---|
 | 0.1.0 | 2026-10-12 | Initial draft. Titled the Pithead Safety and Acceptance Protocol; adoption safety for risk-bearing organizations stated in the Introduction. Shared family problem statement; Introduction opens from the reader's problem. 3.6 and `authorship_disclosure` field (077 21.15). Profiles and Results usable by machines and humans with the same result (3.5, 6.5, 077 21.14). Acceptance Profile record, principles (constrains the record never the control; adds never relaxes; published before applied; deterministic evaluation by machine or human), publication and versioning, Acceptance Evaluation and Result, Profile Registry, worked cyber insurance underwriting profile, IP-A1 to IP-A3. Builds on PP-SPEC-079 v0.1.1. |
+| 0.1.1 | 2026-10-13 | Section 13 limited to editorial responsibility: conformance is determined from the records against the normative text, not decided by the maintainer. |

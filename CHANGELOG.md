@@ -1,6 +1,8 @@
 # Changelog
 
-## Unreleased
+## 0.1.1 (2026-10-13)
+- Section 13: maintainer responsible for editorial text only; conformance determined from the records, not decided by the maintainer
+- CONTRIBUTING.md updated to match
 - Proof, not evidence: wherever the text meant what the protocol produces, relies on, accepts, or prices, "evidence" is now "proof". Evidence remains the word for inputs inside a proof record (liveness, cause, differential, verification evidence). Evidence is not proof; proof contains evidence.
 
 ## 0.1.0 (2026-10-12)
