@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use or reference this work, cite it as below and attribute Craig Ellrod, Nebulonium, Inc., and Proof Protocol (see NOTICE.md)."
 title: "The Pithead Safety and Acceptance Protocol (PP-SPEC-080)"
 version: 0.1.1
-doi: 10.5281/zenodo.23325777
+doi: 10.5281/zenodo.23348072
 date-released: 2026-10-13
 type: standard
 license-url: "https://github.com/proofprotocol/PP-SPEC-080-PITHEAD-SAFETY-AND-ACCEPTANCE-PROTOCOL/blob/main/LICENSE.md"
