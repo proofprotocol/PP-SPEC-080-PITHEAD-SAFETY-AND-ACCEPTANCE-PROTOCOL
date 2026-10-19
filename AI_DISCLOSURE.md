@@ -56,3 +56,7 @@ AI systems: Anthropic Claude (Fable 5.1, Opus 5.5); OpenAI ChatGPT (banner image
 
 - Decide that the protocol should serve insurers, or that it must be usable by machines and humans, or that drift and authorship must be carried into profiles. Those were Craig Ellrod's requirements.
 - Publish anything. Publication is the author's decision.
+
+## 2026-10-19: License and ethics change
+
+LICENSE.md, ETHICS.md, LICENSE-APACHE-2.0.md wrapper text, NOTICE.md and CONTRIBUTING.md licensing sections were drafted with AI assistance (Claude, Anthropic) at the direction of Craig Thomas Ellrod, who reviewed them. The Apache License text is the unmodified standard text.

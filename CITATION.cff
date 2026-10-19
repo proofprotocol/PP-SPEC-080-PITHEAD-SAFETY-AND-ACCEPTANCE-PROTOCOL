@@ -5,7 +5,6 @@ version: 0.1.1
 doi: 10.5281/zenodo.23348072
 date-released: 2026-10-13
 type: standard
-license-url: "https://github.com/proofprotocol/PP-SPEC-080-PITHEAD-SAFETY-AND-ACCEPTANCE-PROTOCOL/blob/main/LICENSE.md"
 keywords:
   - "acceptance profile"
   - "cyber insurance underwriting"
@@ -32,3 +31,5 @@ references:
   - type: generic
     title: "Proof Economy Prior Art Declaration"
     doi: 10.5281/zenodo.21379780
+license: Apache-2.0
+license-url: "LICENSE.md"
