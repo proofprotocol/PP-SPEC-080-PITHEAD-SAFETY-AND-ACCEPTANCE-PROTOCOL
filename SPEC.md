@@ -4,13 +4,13 @@
 
 > **Ownership and Attribution Notice**
 >
-> This specification is authored by **Craig Ellrod** (Nebulonium, Inc., dba HACKERverse) and is published as part of **Proof Protocol**. Copyright (c) 2026 Nebulonium, Inc.
+> This specification is authored by **Craig Thomas Ellrod** and is published as part of **Proof Protocol**. Copyright (c) 2026 Craig Thomas Ellrod.
 >
-> Any use, implementation, derivative, citation, or incorporation of this specification, in whole or in part, MUST attribute **Craig Ellrod, Nebulonium, Inc., and Proof Protocol**. This requirement applies to standards bodies, working groups, consortia, insurers, regulators, and commercial implementations.
+> Any use, implementation, derivative, citation, or incorporation of this specification, in whole or in part, MUST attribute **Craig Thomas Ellrod and Proof Protocol**. This requirement applies to standards bodies, working groups, consortia, insurers, regulators, and commercial implementations.
 >
 > This specification is licensed under the Proof Protocol License 1.0 (see LICENSE.md); text Apache License 2.0 under Part A. Original inventor: Craig Thomas Ellrod (ORCID 0009-0004-1058-7666).
 >
-> **Patents.** Patent terms are in [PATENT-SCHEDULE.md](PATENT-SCHEDULE.md). Claims not listed there are reserved by Craig Ellrod and Nebulonium, Inc. Licensing: 1proofprotocol@gmail.com.
+> **Patents.** Patent terms are in [PATENT-SCHEDULE.md](PATENT-SCHEDULE.md). Claims not listed there are reserved by Craig Thomas Ellrod. Licensing: 1proofprotocol@gmail.com.
 >
 > This specification is related to the Proof Economy Prior Art Declaration, DOI [10.5281/zenodo.21379780](https://doi.org/10.5281/zenodo.21379780).
 
@@ -20,7 +20,7 @@
 | Version | 0.1.1 (Draft) |
 | Date | 2026-10-13 |
 | Status | Draft for public record |
-| Maintainer | Nebulonium, Inc. (Proof Protocol) |
+| Maintainer | Craig Thomas Ellrod (Proof Protocol) |
 | Builds on | PP-SPEC-079 v0.1.1 (Coal Mine Protocol), PP-SPEC-077 v0.7.2 (Dead Canary), PP-SPEC-078 v0.2.1 (Jailed Canary), PP-SPEC-004 (ProofRegister API) |
 
 ---
@@ -227,7 +227,7 @@ Profiles for supervisory review by financial and healthcare regulators, profile 
 
 ## 13. Interpretation
 
-Nebulonium, Inc., as maintainer of Proof Protocol, is responsible for the editorial text of this specification and keeps the Profile Registry (Section 7). Whether a record meets a profile, and whether a profile meets Sections 3 and 4, is determined against the normative text, and is not decided by the maintainer.
+Craig Thomas Ellrod, as maintainer of Proof Protocol, is responsible for the editorial text of this specification and keeps the Profile Registry (Section 7). Whether a record meets a profile, and whether a profile meets Sections 3 and 4, is determined against the normative text, and is not decided by the maintainer.
 
 ## Revision History
 

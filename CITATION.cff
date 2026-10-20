@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use or reference this work, cite it as below and attribute Craig Ellrod, Nebulonium, Inc., and Proof Protocol (see NOTICE.md)."
+message: "If you use or reference this work, cite it as below and attribute Craig Thomas Ellrod and Proof Protocol (see NOTICE.md)."
 title: "The Pithead Safety and Acceptance Protocol (PP-SPEC-080)"
 version: 0.1.1
 doi: 10.5281/zenodo.23348072
@@ -14,7 +14,7 @@ authors:
   - family-names: Ellrod
     given-names: Craig Thomas
     orcid: "https://orcid.org/0009-0004-1058-7666"
-    affiliation: "Nebulonium, Inc. (dba HACKERverse)"
+    affiliation: "Craig Thomas Ellrod"
 references:
   - type: standard
     title: "Proof of Performance Engagement: The Coal Mine Protocol (PP-SPEC-079)"
