@@ -1,7 +1,7 @@
 # Funding Disclosure
 
 Work: The Pithead Safety and Acceptance Protocol (PP-SPEC-080)
-Licensor: Nebulonium, Inc., dba HACKERverse (Proof Protocol)
+Licensor: Craig Thomas Ellrod (Proof Protocol)
 
 ## Declaration
 
