@@ -77,8 +77,10 @@ Proof of Control and Proof of Efficacy are different claims. Proof of Control es
 
 Draft, version 0.1.2, 2026-10-23. Maintained by Craig Thomas Ellrod as part of Proof Protocol. Builds on PP-SPEC-079 v0.1.4, PP-SPEC-077 v0.8.2, PP-SPEC-078 v0.2.4, PP-SPEC-081 v0.1.0, PP-SPEC-004.
 
-Archived on Zenodo: v0.1.1, DOI [10.5281/zenodo.23348072](https://doi.org/10.5281/zenodo.23348072). All versions: [10.5281/zenodo.23325777](https://doi.org/10.5281/zenodo.23325777).
+Archived on Zenodo: v0.1.2, DOI [10.5281/zenodo.23607734](https://doi.org/10.5281/zenodo.23607734). All versions: [10.5281/zenodo.23325777](https://doi.org/10.5281/zenodo.23325777).
+
+Related: PP-SPEC-081, Reproof: The Umpire Assay Protocol, DOI [10.5281/zenodo.23607721](https://doi.org/10.5281/zenodo.23607721).
 
 ## Citation
 
-Ellrod, C. (2026). The Pithead Safety and Acceptance Protocol (PP-SPEC-080), v0.1.1. Proof Protocol, Craig Thomas Ellrod https://doi.org/10.5281/zenodo.23348072
+Ellrod, C. (2026). The Pithead Safety and Acceptance Protocol (PP-SPEC-080), v0.1.2. Proof Protocol, Craig Thomas Ellrod https://doi.org/10.5281/zenodo.23607734
