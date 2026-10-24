@@ -19,6 +19,7 @@
     "series",
     "claim_findings",
     "absence_limits",
+    "reproof",
     "disclosure",
     "registries",
     "self_provided",
@@ -485,6 +486,95 @@
         }
       },
       "additionalProperties": false
+    },
+    "reproof": {
+      "description": "PP-SPEC-080 4.5. Required Reproof Status under PP-SPEC-081, or the string none.",
+      "oneOf": [
+        {
+          "const": "none"
+        },
+        {
+          "type": "object",
+          "required": [
+            "min_status",
+            "scope",
+            "min_independent_checks",
+            "max_splitting_limits",
+            "on_divergent",
+            "on_disputed",
+            "on_not_upheld",
+            "on_checked_insufficient",
+            "min_umpire_pool",
+            "max_comparison_age_days"
+          ],
+          "properties": {
+            "min_status": {
+              "const": "reproven"
+            },
+            "scope": {
+              "enum": [
+                "instance",
+                "class",
+                "either"
+              ]
+            },
+            "min_independent_checks": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "max_splitting_limits": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "description": "Compared Metric name to maximum absolute limit"
+            },
+            "on_divergent": {
+              "enum": [
+                "reject",
+                "flag",
+                "ignore"
+              ]
+            },
+            "on_disputed": {
+              "enum": [
+                "reject",
+                "flag",
+                "ignore"
+              ]
+            },
+            "on_not_upheld": {
+              "enum": [
+                "reject",
+                "flag",
+                "ignore"
+              ]
+            },
+            "on_checked_insufficient": {
+              "enum": [
+                "reject",
+                "flag",
+                "ignore"
+              ]
+            },
+            "min_umpire_pool": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "max_comparison_age_days": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "by_purpose": {
+              "type": "object",
+              "description": "Optional overrides keyed by purpose, e.g. renewal"
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
     }
   },
   "additionalProperties": false

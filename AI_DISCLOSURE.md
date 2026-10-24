@@ -19,7 +19,18 @@ Method: self-estimated. Shares drafted by the AI from its itemized record of wha
 
 Machine-readable form: [ai_disclosure.json](ai_disclosure.json), conforming to PP-SPEC-077 Section 21.15. The two forms agree; if they ever differ, the JSON is wrong and must be corrected.
 
-## This version (0.1.1, 2026-10-13)
+## This version (0.1.2, 2026-10-23)
+
+**Human (Craig Ellrod):**
+- Originated reproof and directed that 077 to 080 carry it
+- Decision to publish, and to license the text under CC BY 4.0
+- Review and acceptance (pending)
+
+**AI (Claude Opus 5.5), at the author's direction:**
+- Text of 4.5, the 2.1 row, the 6.2 change, the seed profile 2.0 values, and the schema change
+- License changes
+
+## Version 0.1.1 (2026-10-13)
 
 **Human:**
 - Decision to limit the maintainer to editorial responsibility (Section 13), matching PP-SPEC-079 v0.1.2

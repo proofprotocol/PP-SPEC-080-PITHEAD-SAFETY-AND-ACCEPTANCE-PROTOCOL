@@ -8,7 +8,7 @@
 >
 > Any use, implementation, derivative, citation, or incorporation of this specification, in whole or in part, MUST attribute **Craig Thomas Ellrod and Proof Protocol**. This requirement applies to standards bodies, working groups, consortia, insurers, regulators, and commercial implementations.
 >
-> This specification is licensed under the Proof Protocol License 1.0 (see LICENSE.md); text Apache License 2.0 under Part A. Original inventor: Craig Thomas Ellrod (ORCID 0009-0004-1058-7666).
+> This specification is licensed under the Proof Protocol License 1.1 (see LICENSE.md); text CC BY 4.0 under Part A, which grants no patent rights. Original inventor: Craig Thomas Ellrod (ORCID 0009-0004-1058-7666).
 >
 > **Patents.** Patent terms are in [PATENT-SCHEDULE.md](PATENT-SCHEDULE.md). Claims not listed there are reserved by Craig Thomas Ellrod. Licensing: 1proofprotocol@gmail.com.
 >
@@ -17,11 +17,11 @@
 | Field | Value |
 |---|---|
 | Spec ID | PP-SPEC-080 |
-| Version | 0.1.1 (Draft) |
-| Date | 2026-10-13 |
+| Version | 0.1.2 (Draft) |
+| Date | 2026-10-23 |
 | Status | Draft for public record |
 | Maintainer | Craig Thomas Ellrod (Proof Protocol) |
-| Builds on | PP-SPEC-079 v0.1.1 (Coal Mine Protocol), PP-SPEC-077 v0.7.2 (Dead Canary), PP-SPEC-078 v0.2.1 (Jailed Canary), PP-SPEC-004 (ProofRegister API) |
+| Builds on | PP-SPEC-079 v0.1.4 (Coal Mine Protocol), PP-SPEC-077 v0.8.2 (Dead Canary), PP-SPEC-078 v0.2.4 (Jailed Canary), PP-SPEC-081 v0.1.0 (Reproof), PP-SPEC-004 (ProofRegister API) |
 
 ---
 
@@ -87,6 +87,7 @@ Terms defined in PP-SPEC-077 Section 2, PP-SPEC-078 Section 2, and PP-SPEC-079 S
 | PP-SPEC-079 Coal Mine | The Performance Record and Series, the Comparability Class, Extension Policy (Section 13) | The reader's side: what a record must satisfy to be accepted |
 | PP-SPEC-077 Dead Canary | Units of Proof, Section 21 record rules | Profiles and Results are Section 21 records |
 | PP-SPEC-078 Jailed Canary | Bookings and verdicts | Profiles may require 078 runs and set verdict thresholds |
+| PP-SPEC-081 Reproof | Independent re-execution of a proof and its Reproof Status | Profiles state what Reproof Status they require (4.5) |
 | PP-SPEC-006 PES | A score | A profile MAY cite a score threshold; it MUST also state the record-level conditions, since a score alone is not an acceptance criterion |
 | PP-SPEC-009 ProofStamp | A mark | A mark's issuer MAY publish its criteria as a profile |
 | PP-SPEC-004 ProofRegister | Registry API | Profiles, Results, and the Profile Registry are published there |
@@ -125,6 +126,7 @@ Terms defined in PP-SPEC-077 Section 2, PP-SPEC-078 Section 2, and PP-SPEC-079 S
 | `thresholds` | Optional minimums on 077 Section 12 and 078 Section 12 metrics, per Technology Profile, and the Comparability Class they apply within | no |
 | `claim_findings` | What a Claim Finding (077 11.6) does: `reject`, `flag`, or `ignore`, optionally per technique class | yes |
 | `absence_limits` | Maximum Blind share and Void share (077 14.3) accepted | yes |
+| `reproof` | Required Reproof Status under PP-SPEC-081 (4.5), or `none` | yes |
 | `disclosure` | Accepted Disclosure Levels; whether `holder_only` records are accepted with a Delegation (077 21.10) to the Consumer | yes |
 | `registries` | Registries the Consumer recognizes, by identifier, or `any_cross_anchored` | yes |
 | `self_provided` | Whether Self-Provided Engagements (079 4.4) are accepted, and if so with what additional separation requirement | yes |
@@ -142,6 +144,8 @@ Terms defined in PP-SPEC-077 Section 2, PP-SPEC-078 Section 2, and PP-SPEC-079 S
 
 4.4. `thresholds` are optional because the record-level conditions are the acceptance criteria. A Consumer that wants a rate threshold MUST state the Comparability Class it applies within and MUST state how Blind and Void shares are treated when the threshold is computed (077 14.3.3).
 
+4.5. **Reproof.** The `reproof` field is either `none` or states: the minimum Reproof Status accepted (`reproven`); the accepted scope (`instance`, `class`, or either); the minimum count of mutually independent agreeing Check Assays; the maximum Splitting Limit the profile accepts per Compared Metric (081 7.4), so that a check run under looser limits does not count; the treatment of `divergent`, `disputed`, `not_upheld`, and `checked_insufficient` (each `reject`, `flag`, or `ignore`); the minimum Umpire pool size (081 8.3); and the maximum age of the agreeing Comparison Record. A Repeat Run (081 4.7) never satisfies this field. A profile that sets `reproof` to `none` MUST say so explicitly; silence is not a value. Reproof Status is computed from the Registry at evaluation time and reported with its history in the Acceptance Result (6.3).
+
 ## 5. Publication and Versioning
 
 5.1. A profile is published to a Registry under PP-SPEC-004 as a record under PP-SPEC-077 Section 21, with `profile_id` as its Record ID, the Consumer as Holder, and Disclosure Level `public`. A non-public profile is a private contract term, not an Acceptance Profile.
@@ -156,7 +160,7 @@ Terms defined in PP-SPEC-077 Section 2, PP-SPEC-078 Section 2, and PP-SPEC-079 S
 
 6.1. An evaluation takes one Performance Record, or one Performance Series, and one profile version, and checks every clause in Section 4 against the record, its Series, and the Registry. The evaluator MUST verify the record's Registry Receipt and Record ID (077 21.2.2, 21.5.2) before evaluating anything else; a record that fails verification fails the profile.
 
-6.2. Evaluation order: receipt and Record ID; Conformance Level; undeclared drift; Comparability Class membership (Technology Profile, Mine Plan composition and version, Environment Class, Parity Declaration or Reference Environment, Regulatory Regime); Engagement Mode and Self-Provided rule; funding tier; record age and Series requirements; absence limits; Claim Findings rule; disclosure and Delegation; extensions; thresholds last. The order exists so that a threshold is never reported as the reason a record failed when the record was not comparable in the first place.
+6.2. Evaluation order: receipt and Record ID; Conformance Level; undeclared drift; Comparability Class membership (Technology Profile, Mine Plan composition and version, Environment Class, Parity Declaration or Reference Environment, Regulatory Regime); Engagement Mode and Self-Provided rule; funding tier; record age and Series requirements; absence limits; Claim Findings rule; disclosure and Delegation; extensions; reproof (4.5); thresholds last. The order exists so that a threshold is never reported as the reason a record failed when the record was not comparable in the first place.
 
 6.3. **Acceptance Result.** The evaluator MUST produce an Acceptance Result record, under tag `AP-1:result`, containing: the Performance Record or Series Record ID; the profile Record ID and version; the evaluation time and Time Anchor pulse; `meets: true | false`; for a failing record, every failing clause by field name with the record's value and the profile's requirement; the evaluator's identity and signature; and the Registry Receipt once registered.
 
@@ -176,7 +180,7 @@ Terms defined in PP-SPEC-077 Section 2, PP-SPEC-078 Section 2, and PP-SPEC-079 S
 
 ## 8. Worked Profile: Cyber Insurance Underwriting
 
-The first seed profile is given in full in [profiles/insurance-cyber-underwriting-1.0.md](profiles/insurance-cyber-underwriting-1.0.md) and as a record in [profiles/insurance-cyber-underwriting-1.0.json](profiles/insurance-cyber-underwriting-1.0.json). In summary:
+The first seed profile is given in full in [profiles/insurance-cyber-underwriting-2.0.md](profiles/insurance-cyber-underwriting-2.0.md) and as a record in [profiles/insurance-cyber-underwriting-2.0.json](profiles/insurance-cyber-underwriting-2.0.json). Version 2.0 supersedes 1.0, which remains in the repository as registered, because requiring reproof makes records acceptable under 1.0 unacceptable (5.2). In summary:
 
 - **Purpose:** underwriting and renewal of cyber liability cover for an insured operating the SUT.
 - **Applies to:** Web Application, Endpoint and Host, Identity and Access, Cloud Workload, and Agentic AI Controls profiles, each evaluated as its own class.
@@ -193,7 +197,8 @@ The first seed profile is given in full in [profiles/insurance-cyber-underwritin
 - **Funding:** Implementor-Funded or PESA-Governed; Provider-Funded not accepted for underwriting.
 - **Authorship:** disclosure required for every component and report; review and acceptance by a named human required; no threshold on AI share.
 - **Drift:** `fragmented` not accepted; Corpus Fingerprint no older than 90 days at the record's last run; rates only within a segment; any undeclared control, corpus, harness, or pigtail drift rejects the record.
-- **Thresholds:** none in version 1.0. The insurer's pricing model consumes the rates; the profile only decides whether a record is admissible to it.
+- **Reproof:** underwriting requires `reproven`, instance scope, at least one independent agreeing Check Assay no older than 180 days, under Splitting Limits no looser than 0.05 absolute on Stopped and False block rates; `divergent` flags, `disputed` and `not_upheld` reject; Umpire pool of at least three. Renewal accepts `class` scope.
+- **Thresholds:** none in version 2.0. The insurer's pricing model consumes the rates; the profile only decides whether a record is admissible to it.
 
 The profile deliberately sets no efficacy threshold. An underwriting profile exists to admit proof into a pricing model, not to replace the model. The frequency signal is the efficacy and miss rates by technique class; the severity signal comes from elsewhere; the profile's job is to make sure the frequency signal is real, recent, comparable, and independently produced.
 
@@ -235,3 +240,4 @@ Craig Thomas Ellrod, as maintainer of Proof Protocol, is responsible for the edi
 |---|---|---|
 | 0.1.0 | 2026-10-12 | Initial draft. Titled the Pithead Safety and Acceptance Protocol; adoption safety for risk-bearing organizations stated in the Introduction. Shared family problem statement; Introduction opens from the reader's problem. 3.6 and `authorship_disclosure` field (077 21.15). Profiles and Results usable by machines and humans with the same result (3.5, 6.5, 077 21.14). Acceptance Profile record, principles (constrains the record never the control; adds never relaxes; published before applied; deterministic evaluation by machine or human), publication and versioning, Acceptance Evaluation and Result, Profile Registry, worked cyber insurance underwriting profile, IP-A1 to IP-A3. Builds on PP-SPEC-079 v0.1.1. |
 | 0.1.1 | 2026-10-13 | Section 13 limited to editorial responsibility: conformance is determined from the records against the normative text, not decided by the maintainer. |
+| 0.1.2 | 2026-10-23 | PP-SPEC-081 Reproof added to 2.1. 4.1 and 4.5 `reproof` field, required (`none` must be stated). 6.2 reproof evaluated before thresholds. Seed insurance profile 2.0 requires reproven, instance scope; 1.0 superseded. Schema updated. Licensed under Proof Protocol License 1.1: text CC BY 4.0 from this version; earlier versions remain Apache-2.0. |

@@ -8,7 +8,7 @@
 >
 > Any use, implementation, derivative, citation, or incorporation of this work, in whole or in part, MUST attribute **Craig Thomas Ellrod and Proof Protocol**. See [NOTICE.md](NOTICE.md).
 >
-> Licensed under the Proof Protocol License 1.0 (see LICENSE.md); text Apache License 2.0 under Part A. Original inventor: Craig Thomas Ellrod (ORCID 0009-0004-1058-7666).
+> Licensed under the Proof Protocol License 1.1 (see LICENSE.md); text CC BY 4.0 under Part A, which grants no patent rights. Original inventor: Craig Thomas Ellrod (ORCID 0009-0004-1058-7666).
 >
 > **Patents.** Patent terms are in [PATENT-SCHEDULE.md](PATENT-SCHEDULE.md). Claims not listed there are reserved by Craig Thomas Ellrod. Licensing: 1proofprotocol@gmail.com.
 >
@@ -63,15 +63,19 @@ Proof of Control and Proof of Efficacy are different claims. Proof of Control es
 | [SPEC.md](SPEC.md) | The specification |
 | [schemas/acceptance-profile.schema.json](schemas/acceptance-profile.schema.json) | Profile record schema |
 | [schemas/acceptance-result.schema.json](schemas/acceptance-result.schema.json) | Acceptance Result schema |
-| [profiles/insurance-cyber-underwriting-1.0.md](profiles/insurance-cyber-underwriting-1.0.md) | Seed profile, explained |
-| [profiles/insurance-cyber-underwriting-1.0.json](profiles/insurance-cyber-underwriting-1.0.json) | Seed profile, as a record |
+| [profiles/insurance-cyber-underwriting-2.0.md](profiles/insurance-cyber-underwriting-2.0.md) | Seed profile 2.0 (requires reproof), explained |
+| [profiles/insurance-cyber-underwriting-1.0.md](profiles/insurance-cyber-underwriting-1.0.md) | Seed profile 1.0, superseded |
+| [profiles/insurance-cyber-underwriting-2.0.json](profiles/insurance-cyber-underwriting-2.0.json) | Seed profile 2.0, as a record |
+| [profiles/insurance-cyber-underwriting-1.0.json](profiles/insurance-cyber-underwriting-1.0.json) | Seed profile 1.0 (superseded), as a record |
 | [AI_DISCLOSURE.md](AI_DISCLOSURE.md), [ai_disclosure.json](ai_disclosure.json) | Human and AI authorship (077 21.15) |
 | [NOTICE.md](NOTICE.md) | Attribution and patent notice |
 | [LICENSE.md](LICENSE.md) | License declaration |
+| [LICENSE-CC-BY-4.0.md](LICENSE-CC-BY-4.0.md) | CC BY 4.0, specification text from 0.1.2 |
+| [LICENSE-APACHE-2.0.md](LICENSE-APACHE-2.0.md) | Apache 2.0, versions before 0.1.2 |
 
 ## Status
 
-Draft, version 0.1.1, 2026-10-13. Maintained by Craig Thomas Ellrod as part of Proof Protocol. Builds on PP-SPEC-079 v0.1.1, PP-SPEC-077 v0.7.2, PP-SPEC-078 v0.2.1, PP-SPEC-004.
+Draft, version 0.1.2, 2026-10-23. Maintained by Craig Thomas Ellrod as part of Proof Protocol. Builds on PP-SPEC-079 v0.1.4, PP-SPEC-077 v0.8.2, PP-SPEC-078 v0.2.4, PP-SPEC-081 v0.1.0, PP-SPEC-004.
 
 Archived on Zenodo: v0.1.1, DOI [10.5281/zenodo.23348072](https://doi.org/10.5281/zenodo.23348072). All versions: [10.5281/zenodo.23325777](https://doi.org/10.5281/zenodo.23325777).
 

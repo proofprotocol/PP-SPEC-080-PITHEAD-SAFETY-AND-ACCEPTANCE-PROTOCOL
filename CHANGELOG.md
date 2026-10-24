@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.2 (2026-10-23)
+- 2.1: PP-SPEC-081 Reproof row.
+- 4.1, 4.5: required `reproof` field; a Repeat Run never satisfies it; `none` must be stated explicitly.
+- 6.2: reproof evaluated after extensions, before thresholds.
+- Section 8 and profiles/: seed insurance underwriting profile 2.0 requires reproof; supersedes 1.0.
+- schemas/acceptance-profile.schema.json: `reproof`.
+- License: Proof Protocol License 1.1. Specification text is CC BY 4.0 from this version (LICENSE-CC-BY-4.0.md), which grants no patent rights; patents only under LICENSE.md Part A2 and PATENT-SCHEDULE.md. Earlier versions remain Apache-2.0 (Part A6).
+
 ## 2026-10-20 (licensor)
 
 - Licensor, copyright holder, maintainer and author changed from Nebulonium, Inc. (dba HACKERverse) to Craig Thomas Ellrod. Contact: CraigEllrod@gmail.com. Historical statements of what HACKERverse published and when are unchanged.
