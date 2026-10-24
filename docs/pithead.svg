@@ -122,7 +122,7 @@
   <text x="56" y="830" fill="#e6edf3">deterministic: no clause needs a judgment</text>
   <text x="56" y="846" fill="#e6edf3">discloses its own authorship (077 21.15)</text>
   <rect x="640" y="720" width="560" height="160" rx="6" fill="#161b22" stroke="#f2cc60"/>
-  <text x="656" y="744" fill="#f2cc60" font-weight="bold">Seed: ap:insurance-cyber-underwriting:1.0</text>
+  <text x="656" y="744" fill="#f2cc60" font-weight="bold">Seed: ap:insurance-cyber-underwriting:2.0</text>
   <text x="656" y="766" fill="#e6edf3">In-Situ prod or pre-prod, or Lab on a recognized</text>
   <text x="656" y="782" fill="#e6edf3">Reference Environment; record at most 180 days old</text>
   <text x="656" y="798" fill="#e6edf3">renewal: Series of 2+ entries, at most 120 days apart</text>
